@@ -161,34 +161,6 @@ mewhelp-evidence/
    └─ README.md
 ```
 
-## 如何让别人直接查看
-
-GitHub/Gitee 会直接渲染 `.md`、`.py`、`.json`、`.txt`，对方不需要安装 Python，也不需要克隆仓库。
-
-上传后，把证据索引里的相对链接换成带行号的文件链接，例如：
-
-```text
-https://github.com/<账号>/mewhelp-evidence/blob/main/snippets/graph_build.py#L1-L18
-```
-
-公开/私有建议：
-
-- 只放本证据包，可以设为 Public；
-- 如果公司要求看完整工程，完整源码放私有仓库，在 `Settings → Collaborators` 给对方 Read 权限；
-- 不要把课程完整源码直接公开，先确认课程版权。
-
-初始化并推送：
-
-```powershell
-cd "E:\电商AI智能客服平台\python\mewhelp-evidence"
-git init
-git add .
-git commit -m "MewHelp redacted evidence pack"
-git branch -M main
-git remote add origin <你的仓库地址>
-git push -u origin main
-```
-
 ## 脱敏说明
 
 本包不包含：
@@ -215,9 +187,3 @@ git push -u origin main
 - 知识库是平台规则，不是法律法条库；
 - 没有法条版本、生效日期、法律意见审核；
 - 报告生成模型是 `MiniMax-M2.5`，不是当前运行环境的 `deepseek-chat`；
-- 0.7% 与当前报告不一致，按报告应为 0.33%；
-- A30 编造个案仍未关闭。
-
-## 版权说明
-
-项目基线来自课程配套源码 MewHelp；本仓库仅摘录关键片段用于面试核验，不构成完整源码分发，不改变原始项目版权。
